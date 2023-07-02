@@ -22,3 +22,7 @@ if defined?(I18n) && !defined?(RIZZ_I18N_LOCALE)
   RIZZ_I18N_LOCALE = true
   I18n.load_path += Dir["#{File.dirname(__FILE__)}/support/locale/*.yml"]
 end
+
+class Module
+    alias :_orig_klass_name :name
+end
