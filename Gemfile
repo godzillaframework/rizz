@@ -57,7 +57,7 @@ group :development do
   end
 end
 
-load File.expand_path('../rizz/subgems.rb', __FILE__)
+load File.expand_path('./rizz/subgems.rb', __FILE__)
 RIZZ_GEMS.each_key do |name|
   gem name, :path => File.expand_path('../' + name, __FILE__)
 end
